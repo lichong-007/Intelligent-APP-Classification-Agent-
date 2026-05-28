@@ -53,10 +53,9 @@ A web interface displaying the final multi-modal classification results, includi
 - **Storage**: PostgreSQL (MCP-managed human review results)
 - **Dynamic Testing**: Cloud Phone / ADB automation
 - **Classification**: Rule engine + LLM multi-modal fusion
-- **Scaling**: Docker-based elastic worker scaling
 
 ## Core Capabilities
 - **End-to-end Automated Review**: From APK upload to multi-label classification without manual intervention
 - **Resilient Workflow**: Native support for retries, timeouts, and degraded modes 
 - **High Throughput**: Async task queue + parallel workers to handle large-scale APK batches
-- **Human-in-the-loop Closed Loop**: MCP-enabled review process to improve classification accuracy and reduce manual effort
+- **Human-in-the-loop Closed Loop**: MCP supports manual classification for single APKs and reclassifies low-scoring LLM samples into the database
